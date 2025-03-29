@@ -1,0 +1,47 @@
+num: 1435
+str: "this is a string, how exciting. Here's some non-ascii UTF-8 Ѭ for good measure."
+b: "\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x02\x00\x00\x00\x90wS\xde\x00\x00\x00\x01sRGB\x01\xd9\xc9,\x00\x00\x00\x04gAMA\x00\x00\xb1\x8f\x0b\xfca\x05\x00\x00\x00 cHRM\x00\x00z&\x00\x00\x80\x84\x00\x00\xfa\x00\x00\x00\x80\xe8\x00\x00u0\x00\x00\xea`\x00\x00:\x98\x00\x00\x17p\x9c\xbaQ<\x00\x00\x00\x0fIDAT\x08\x1d\x01\x04\x00\xfb\xff\x00\xff\xff\xff\x05\xfe\x02\xfe\x03}\x19\xc6\x00\x00\x00\x00IEND\xaeB`\x82"
+nested: {
+  i64: -1
+  f32: 3.1415927
+  bools: true
+  bools: false
+  bools: false
+  bools: true
+  nested_messages: {
+    f32: -1
+  }
+  nested_messages: {
+    i64: 1
+    f32: -1e-12
+    nested_messages: {
+      i64: 2
+    }
+    more_nested: {
+      mnm: {
+        mnm: {
+          i: 31473634653246
+        }
+      }
+    }
+  }
+  more_nested: {
+    some_enum: SE_UNKNOWN
+    some_enum: SE_KNOWN
+    some_enum: SE_BIG
+    m: {
+      key: "123"
+      value: 5
+    }
+    m: {
+      key: "456"
+      value: 6e+20
+    }
+    m: {
+      key: "789"
+      value: 0.7
+    }
+    sf: 1
+    s: "qwerty"
+  }
+}

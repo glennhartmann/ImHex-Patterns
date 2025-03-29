@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+message TestMessage {
+    int32 num = 1;
+    string str = 2;
+    bytes b = 3;
+    NestedMessage nested = 5;
+}
+
+message NestedMessage {
+    int64 i64 = 1;
+    float f32 = 2;
+    repeated bool bools = 3;
+    repeated NestedMessage nested_messages = 4;
+    MoreNestedMessage more_nested = 536870910;
+}
+
+enum SomeEnum {
+    SE_UNKNOWN = 0;
+    SE_KNOWN = 1;
+    SE_BIG = 2000000000;
+}
+
+message MoreNestedMessage {
+    repeated SomeEnum some_enum = 1;
+    map<string, double> m = 2;
+    sfixed32 sf = 3;
+    oneof oo {
+        string s = 4;
+        MoreNestedMessage mnm = 5;
+        bytes b = 6;
+        int64 i = 7;
+    }
+}
